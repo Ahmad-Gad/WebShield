@@ -13,14 +13,10 @@ interface IndexProps {
 }
 const Index: React.FC<IndexProps> = (props) =>  {
   const router = useRouter();
+  
   useEffect(() => {
-    // Always do navigations after the first render
-    router.push('', undefined, { shallow: true })
-  }, [])
- 
-  useEffect(() => {
-    // The counter changed!
-  }, [router.query.counter])
+    router.push('', undefined, { shallow: true });
+  }, [router]);
   
   return (
     <div className="container">
